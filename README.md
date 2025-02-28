@@ -1,5 +1,7 @@
 # 3tier_architecture_terraform
 
+![Architecture Diagram](3tier_architecture_terraform/architecture.png)
+
 This architecture represents a highly available, scalable, and secure AWS infrastructure for a web application. Below is a breakdown of the key components:
 
 # 1. User Access Layer
