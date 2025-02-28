@@ -15,7 +15,7 @@ provider "aws" {
 # Module: Networking (VPC, Subnets, IGW, NAT)
 module "network" {
   source = "./modules/network"
-  availability_zones   = ["us-east-1a", "us-east-1b", "us-east-1a", "us-east-1b", "us-east-1a", "us-east-1b"]  # ✅ Added this line
+  availability_zones   = ["us-east-1a", "us-east-1b", "us-east-1a", "us-east-1b", "us-east-1a", "us-east-1b"]  
 
 
   private_subnet_cidrs = [
@@ -59,8 +59,7 @@ module "rds" {
   db_username         = "admin"
   db_password         = "password123"  # Consider using AWS Secrets Manager
   db_security_group_id = module.security_group.security_group_id
-  db_subnet_ids       = [module.network.private_subnet_ids[4], module.network.private_subnet_ids[5]]  # ✅ Fixed Reference
-}
+  db_subnet_ids       = [module.network.private_subnet_ids[4], module.network.private_subnet_ids[5]]
 
 
 
