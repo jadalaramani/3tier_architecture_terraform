@@ -38,3 +38,11 @@ Multi-AZ architecture ensures failover and redundancy.
 
 # Summary
 This architecture is well-designed for scalability, fault tolerance, and security, making it suitable for production-grade applications. Let me know if you need a Terraform implementation for this! 
+
+# Workflow Overview
+
+# 1. User Request: A user sends a request, which is routed through Route 53.
+# 2. Load Balancing: The ELB distributes the request to an available web server in the web subnet.
+# 3. Web Server Processing: The web server processes the request or forwards it to the app server.
+# 4. App Server Logic: The app server performs business logic, querying the Amazon RDS database if needed.
+# 5. Response Delivery: The data flows back from the app server to the web server, through route53, and then to the user.
