@@ -13,10 +13,10 @@ variable "san_names" {
 
 output "acm_certificate_arn" {
   description = "The ARN of the ACM certificate"
-  value       = aws_acm_certificate.b15facebook_cert.arn
+  value       = aws_acm_certificate.b17facebook_cert.arn
 }
 
-resource "aws_acm_certificate" "b15facebook_cert" {
+resource "aws_acm_certificate" "b17facebook_cert" {
   domain_name               = var.domain_name
   validation_method         = "DNS"
   subject_alternative_names = var.san_names
