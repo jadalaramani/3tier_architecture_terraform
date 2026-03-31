@@ -153,6 +153,6 @@ module "route53" {
 
 module "acm" {
   source      = "./modules/acm"
-  domain_name = "b15facebook.xyz"
-  san_names   = ["*.b15facebook.xyz"]
+  domain_name = "b17facebook.xyz"
+  san_names   = ["*.b17facebook.xyz"]
 }
