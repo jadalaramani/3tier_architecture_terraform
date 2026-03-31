@@ -105,7 +105,7 @@ module "launch_templates" {
   key_name            = "ramanikey"
   ami_id_frontend     = "ami-0c74c875f4df01539"
   ami_id_backend      = "ami-028bea3d2aaaef497"
-  instance_type       = "t2.micro"
+  instance_type       = "t3.micro"
   frontend_user_data  = "frontend.sh"
   backend_user_data   = "backend.sh"
   security_group_id   = module.security_group.security_group_id
@@ -132,7 +132,7 @@ module "autoscaling" {
 module "bastion" {
   source            = "./modules/bastion"
   ami_id            = "ami-04b4f1a9cf54c11d0"
-  instance_type     = "t2.micro"
+  instance_type     = "t3.micro"
   key_name          = "ramanikey"
   public_subnet_id  = module.network.public_subnet_ids[0]
   security_group_id = module.security_group.security_group_id
