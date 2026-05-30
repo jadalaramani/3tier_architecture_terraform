@@ -446,6 +446,13 @@ This record routes frontend API requests to backend ALB.
 
 ---
 
+## Add the record of rds in private hosted zone rds.com
+
+```
+book.rds.com ---> database endpoint as a record
+```
+
+
 ## 5. Connect Backend Server from Bastion Host
 
 Since backend servers are in private subnets, connect through Bastion Host.
